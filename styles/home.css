@@ -22,23 +22,42 @@ body {
     position: absolute;
     width: 100vw;
     z-index: 1;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding-top: 2vh;
 }
 
-/* Small screens */
-@media (max-width: 600px) {
-    #menu img {
-        transform: scale(0.6); /* Shrink to 50% of original size */
+@media (max-width: 600px) and (min-width: 526px) {
+    .row-item {
+        transform: scale(0.9); /* Shrink to 50% of original size */
+    }
+
+    #menu div {
+        border: 1px solid red;
+        overflow-y: auto;
+    }
+
+    .row-item {
+        text-align: left; /* Aligns content to the left */
+    }
+    
+    .row-item img {
+        display: inline-block; /* Ensures images are inline-block elements */
     }
 }
 
-/* Medium screens */
-@media (min-width: 601px) and (max-width: 900px) {
-    #menu img {
-        transform: scale(0.8); /* Shrink to 75% of original size */
+@media (max-width: 526px) {
+    .row-item {
+        transform: scale(0.6); /* Shrink to 50% of original size */
+    }
+
+    #menu div {
+        background-color: black;
+        padding-bottom: 14px;
+        overflow-y: auto;
+        margin-right: 40vh;
+        width: 600px;
     }
 }
