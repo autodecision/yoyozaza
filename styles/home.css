@@ -29,8 +29,16 @@ body {
     padding-top: 2vh;
 }
 
-#menu img {
-    margin-left: 2vw;
+/* Small screens */
+@media (max-width: 600px) {
+    #menu img {
+        transform: scale(0.6); /* Shrink to 50% of original size */
+    }
 }
 
-
+/* Medium screens */
+@media (min-width: 601px) and (max-width: 900px) {
+    #menu img {
+        transform: scale(0.8); /* Shrink to 75% of original size */
+    }
+}
