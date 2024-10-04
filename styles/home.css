@@ -23,12 +23,13 @@ body {
     width: 100vw;
     z-index: 1;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #menu img {
     margin-left: 2vw;
 }
 
-#menu img:first-child {
-    margin-top: 4vh;
-}
+
