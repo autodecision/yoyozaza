@@ -6,7 +6,6 @@
 
 body {
     background-color: black;
-    overflow: hidden;
 }
 
 #container {
@@ -19,8 +18,14 @@ body {
     top: 0;
 }
 
+.row-item {
+    display: flex;
+    align-items: flex-start;
+}
+
 #menu {
-    position: relative;
+    position: absolute;
+    top: 0;
     width: 100vw;
     z-index: 1;
     height: 100vh;
@@ -39,14 +44,6 @@ body {
         border: 1px solid red;
         overflow-y: auto;
     }
-
-    .row-item {
-        text-align: left; /* Aligns content to the left */
-    }
-    
-    .row-item img {
-        display: inline-block; /* Ensures images are inline-block elements */
-    }
 }
 
 @media (max-width: 526px) {
@@ -55,7 +52,9 @@ body {
     }
 
     #menu {
-        
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
     #menu div {
@@ -64,5 +63,6 @@ body {
         padding-left: 14px;
         overflow-y: auto;
         width: 800px;
+        position: relative;
     }
 }
